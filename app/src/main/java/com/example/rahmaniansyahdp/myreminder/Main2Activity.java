@@ -26,6 +26,8 @@ public class Main2Activity extends AppCompatActivity {
     TimePickerDialog timePickerDialog ;
     TextView textAlarmPrompt ;
     Calendar targetCal ;
+    int jam = 0;
+    int menit = 0;
 
     final static int RQS_1 = 1 ;
     //----------------------------------
@@ -95,6 +97,9 @@ public class Main2Activity extends AppCompatActivity {
             calSet.set(Calendar.MINUTE, minute);
             calSet.set(Calendar.SECOND, 0);
             calSet.set(Calendar.MILLISECOND, 0);
+
+            jam = hourOfDay;
+            menit = minute;
 
             if (calSet.compareTo(calNow) <= 0) {
                 // Today Set time passed, count to tomorrow
