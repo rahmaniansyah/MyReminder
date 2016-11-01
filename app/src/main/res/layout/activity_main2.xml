@@ -10,49 +10,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.rahmaniansyahdp.myreminder.Main2Activity">
 
-    <TextView
-        android:text="Masukan waktu:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/textView" />
-
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:id="@+id/linearLayout">
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:layout_weight="2"
-            android:id="@+id/editJam"
-            android:hint="00"
-            android:gravity="center" />
+        android:id="@+id/linearLayout"
+        android:layout_alignParentStart="true">
 
-      <TextView
-            android:text=":"
+        <TextView
+            android:text="Masukan waktu:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:id="@+id/textView2"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/textView" />
 
-        <EditText
+        <TextView
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="00"
-            android:ems="10"
-            android:layout_weight="2"
-            android:id="@+id/editMenit"
-            android:gravity="center" />
+            android:layout_alignBottom="@+id/ambilJam"
+            android:layout_toStartOf="@+id/button"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="11dp"
+            android:id="@+id/alarmprompt" />
+
+        <Button
+            android:text="Cek ambil jam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ambilJam"
+            android:onClick="@+id/openTimePickerDialog"
+            android:layout_below="@+id/button"
+            android:layout_alignParentStart="true" />
+
+
     </LinearLayout>
 
     <TextView
@@ -78,13 +72,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="12dp"
         android:onClick="simpanData"
         android:background="@android:color/holo_green_light"
         android:text="Simpan"
-        android:id="@+id/button" />
+        android:id="@+id/button"
+        android:layout_below="@+id/editKegiatan"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="51dp" />
 
 
 </RelativeLayout>
